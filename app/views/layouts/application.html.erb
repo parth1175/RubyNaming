@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RubyNaming</title>
+    <link rel="shortcut icon" href="ruby.ico">
+    <%= csrf_meta_tags %>
+    <!--<%= favicon_link_tag asset_path('ruby.ico'), :rel => 'icon', :type => "image/x-icon" %>-->
+    <%= favicon_link_tag asset_path('hacker.png'), :rel => 'icon', :type => "image/png" %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
