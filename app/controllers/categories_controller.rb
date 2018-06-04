@@ -8,7 +8,7 @@ class CategoriesController < ApplicationController
     end
 
     def index
-      @category = @rname.find(params[:])
+      @category = @rname.find(params[:id])
     end
 
 private
