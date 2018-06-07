@@ -1,2 +1,25 @@
-<p><%= category.instance %></p>
+<p id = "instance"><%= category.instance %></p>
+
+<!-- There is only one thing inside of the category model, and that is instance -->
+
+
+
+   <%= link_to "Show", ShowCategory_path(@rnaming.id, category.id) %>
+<!--
+**************************
+SOLUTION!!!!
+
+THe helper takes the rnaming_id on its from @rnaming, but thats only when it encounters it.
+
+Since it was encountered afterwords, the rnaming_id was passed to the URL path, but only after the category.id
+
+Therefore we had to show it @rnaming beforehand so it gets the id automatically, or you can just directly give the URL path the @rnaming.id
+**************************
+
+ -->
+
+
+<!-- basically here you are giving the show action the value for the categories id, since that is what we are using. -->
+
+
 <%= link_to "Delete", rnaming_category_path(@rnaming, category.id), method: :delete, data: {confirm: "Are your sure?"} %>

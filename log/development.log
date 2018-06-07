@@ -331,3 +331,1914 @@ Processing by RnamingsController#show as HTML
 Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.2ms)
 
 
+  [1m[36mRnaming Load (3.1ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (33.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_categories_on_rnaming_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_categories_on_rnaming_id' AND type='index'
+[0m
+  [1m[36mRnaming Load (0.4ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-06-04 19:29:13 -0400
+  [1m[35m (14.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.5ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 1454ms (Views: 1391.0ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mCategory Load (13.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "rnamings" ("area", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["area", "pussy"], ["created_at", "2018-06-04 23:35:09.777151"], ["updated_at", "2018-06-04 23:35:09.777151"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("instance", "rnaming_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["instance", "white pussy"], ["rnaming_id", 2], ["created_at", "2018-06-04 23:35:09.780844"], ["updated_at", "2018-06-04 23:35:09.780844"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRnaming Load (0.4ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-06-04 19:35:56 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 162ms (Views: 156.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-04 19:35:58 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [1 times] (1.3ms)
+  Rendered rnamings/show.html.erb within layouts/application (47.6ms)
+Completed 200 OK in 162ms (Views: 101.8ms | ActiveRecord: 1.5ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_categories_on_rnaming_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_categories_on_rnaming_id' AND type='index'
+[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddMultipleColumns (20180605005712)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (15.4ms)[0m  [1m[35mALTER TABLE "categories" ADD "case" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "categories" ADD "character" varchar[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "categories" ADD "plurality" varchar[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180605005712"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_categories_on_rnaming_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_categories_on_rnaming_id' AND type='index'
+[0m
+  [1m[36mRnaming Load (3.0ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mRnaming Load (0.4ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["LIMIT", 11]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["LIMIT", 11]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (21.4ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = ?, "case" = ?, "character" = ?, "plurality" = ? WHERE "categories"."id" = ?[0m  [["updated_at", "2018-06-05 01:07:54.729809"], ["case", "this dick"], ["character", "kind of loose"], ["plurality", "give me as many as possible"], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/rnamings" for 127.0.0.1 at 2018-06-04 21:09:16 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.4ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 282ms (Views: 225.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-04 21:09:34 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [1 times] (1.2ms)
+  Rendered rnamings/show.html.erb within layouts/application (68.3ms)
+Completed 200 OK in 145ms (Views: 113.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-04 21:17:48 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [1 times] (1.4ms)
+  Rendered rnamings/show.html.erb within layouts/application (230.8ms)
+Completed 200 OK in 1906ms (Views: 1823.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/rnamings/ruby.ico" for 127.0.0.1 at 2018-06-04 21:17:52 -0400
+Processing by RnamingsController#show as 
+  Parameters: {"id"=>"ruby"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=ruby):
+  
+app/controllers/rnamings_controller.rb:67:in `set_rnaming'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-04 21:18:23 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [1 times] (0.8ms)
+  Rendered rnamings/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 100ms (Views: 93.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-04 21:18:58 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [1 times] (1.1ms)
+  Rendered rnamings/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 185ms (Views: 180.0ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mRnaming Load (2.1ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("instance", "rnaming_id", "created_at", "updated_at", "case", "character", "plurality") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["instance", "black pussy"], ["rnaming_id", 2], ["created_at", "2018-06-05 02:20:21.319270"], ["updated_at", "2018-06-05 02:20:21.319270"], ["case", "upper_da_ass case"], ["character", "as long as she is light skinned, Im fine"], ["plurality", "I feel like I might catch feels..."]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-04 22:20:51 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (1.0ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (4.8ms)
+  Rendered rnamings/show.html.erb within layouts/application (132.1ms)
+Completed 200 OK in 744ms (Views: 720.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/rnamings" for 127.0.0.1 at 2018-06-05 15:32:53 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (33.2ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (110.2ms)
+Completed 200 OK in 4246ms (Views: 4075.5ms | ActiveRecord: 33.2ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-05 15:32:59 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (3.5ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.5ms)
+  Rendered rnamings/show.html.erb within layouts/application (92.7ms)
+Completed 200 OK in 438ms (Views: 229.6ms | ActiveRecord: 3.8ms)
+
+
+Started DELETE "/rnamings/2/categories/2" for 127.0.0.1 at 2018-06-05 15:33:05 -0400
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for CategoriesController):
+  
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-06-05 15:33:48 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (54.3ms)
+Completed 200 OK in 924ms (Views: 790.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-05 15:33:52 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.1ms)
+  Rendered rnamings/show.html.erb within layouts/application (48.8ms)
+Completed 200 OK in 97ms (Views: 89.8ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/rnamings/2/categories/2" for 127.0.0.1 at 2018-06-05 15:33:56 -0400
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for CategoriesController):
+  
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-06-05 15:34:15 -0400
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-05 15:34:15 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 189ms (Views: 156.6ms | ActiveRecord: 1.5ms)
+
+
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.2ms)
+  Rendered rnamings/show.html.erb within layouts/application (58.1ms)
+Completed 200 OK in 125ms (Views: 102.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-05 15:34:16 -0400
+Processing by RnamingsController#index as HTML
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-05 15:34:16 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.1ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (10.5ms)
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.7ms)
+  Rendered rnamings/show.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 89ms (Views: 84.1ms | ActiveRecord: 0.6ms)
+
+
+Completed 200 OK in 151ms (Views: 146.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-05 15:34:19 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.1ms)
+  Rendered rnamings/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 516ms (Views: 510.8ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/rnamings/2/categories/2" for 127.0.0.1 at 2018-06-05 15:34:23 -0400
+Processing by CategoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2EFvE6lUiKDmvIwCRitT9OcCiDmSMthnuW9hKoquo1VRUID3Jaze88JdezieLacJNSmLjrmSt09McDpUodQ19g==", "rnaming_id"=>"2", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `find' for #<Rnaming:0x007ff585058980>):
+  
+app/controllers/categories_controller.rb:17:in `destroy'
+Started GET "/" for 127.0.0.1 at 2018-06-05 15:35:24 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (48.8ms)
+Completed 200 OK in 565ms (Views: 507.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-05 15:35:27 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (0.8ms)
+  Rendered rnamings/show.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 80ms (Views: 74.1ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/rnamings/2/categories/2" for 127.0.0.1 at 2018-06-05 15:35:30 -0400
+Processing by CategoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mNcIAw8fAvYgdAm4zkompLHFrpzZQz9s9geSYR3IgwARxufng+dUpQSV/oIWTNJZY+6tK/LjUEQDGMkfNrIVow==", "rnaming_id"=>"2", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (69.5ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 2]]
+  [1m[35m (569.6ms)[0m  [1m[36mcommit transaction[0m
+No template found for CategoriesController#destroy, rendering head :no_content
+Completed 204 No Content in 1146ms (ActiveRecord: 639.8ms)
+
+
+Started DELETE "/rnamings/2/categories/2" for 127.0.0.1 at 2018-06-05 15:35:38 -0400
+Processing by CategoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mNcIAw8fAvYgdAm4zkompLHFrpzZQz9s9geSYR3IgwARxufng+dUpQSV/oIWTNJZY+6tK/LjUEQDGMkfNrIVow==", "rnaming_id"=>"2", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Category with 'id'=2 [WHERE "categories"."rnaming_id" = ?]):
+  
+app/controllers/categories_controller.rb:17:in `destroy'
+  [1m[36mRnaming Load (3.1ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mRnaming Load (1.0ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["LIMIT", 11]]
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (26.2ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-06-05 15:43:08 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (1.4ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (66.8ms)
+Completed 200 OK in 3118ms (Views: 2458.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-05 15:43:13 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.4ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered rnamings/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 97ms (Views: 89.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rnamings" for 127.0.0.1 at 2018-06-05 15:43:16 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 119ms (Views: 115.0ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRnaming Load (0.8ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (46.1ms)[0m  [1m[32mINSERT INTO "categories" ("instance", "rnaming_id", "created_at", "updated_at", "case", "character", "plurality") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["instance", "white pussy"], ["rnaming_id", 2], ["created_at", "2018-06-05 19:45:21.362884"], ["updated_at", "2018-06-05 19:45:21.362884"], ["case", "middlecase"], ["character", "middleCharacter"], ["plurality", "Usually found in a group"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (46.9ms)[0m  [1m[32mINSERT INTO "categories" ("instance", "rnaming_id", "created_at", "updated_at", "case", "character", "plurality") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["instance", "black pussy"], ["rnaming_id", 2], ["created_at", "2018-06-05 19:46:44.678277"], ["updated_at", "2018-06-05 19:46:44.678277"], ["case", "HighCase"], ["character", "LowCharacter"], ["plurality", "Easier to pull one solo"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (266.6ms)[0m  [1m[32mINSERT INTO "categories" ("instance", "rnaming_id", "created_at", "updated_at", "case", "character", "plurality") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["instance", "brown pussy"], ["rnaming_id", 2], ["created_at", "2018-06-05 19:48:51.234286"], ["updated_at", "2018-06-05 19:48:51.234286"], ["case", "LowCase"], ["character", "HighCharacter"], ["plurality", "Found in a group, but used in solo"]]
+  [1m[35m (855.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["LIMIT", 11]]
+Started GET "/rnamings" for 127.0.0.1 at 2018-06-05 15:49:25 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 310ms (Views: 291.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ruby.ico" for 127.0.0.1 at 2018-06-05 15:49:26 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/ruby.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-05 15:49:27 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [3 times] (1.6ms)
+  Rendered rnamings/show.html.erb within layouts/application (59.8ms)
+Completed 200 OK in 116ms (Views: 108.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-05 15:51:32 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [3 times] (2.5ms)
+  Rendered rnamings/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 1442ms (Views: 1436.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-05 15:51:49 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [3 times] (1.9ms)
+  Rendered rnamings/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 185ms (Views: 179.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-05 15:52:55 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [3 times] (32.4ms)
+  Rendered rnamings/show.html.erb within layouts/application (42.5ms)
+Completed 200 OK in 317ms (Views: 310.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-05 15:53:28 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [3 times] (1.1ms)
+  Rendered rnamings/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 225ms (Views: 219.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings" for 127.0.0.1 at 2018-06-05 23:14:15 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (1.2ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 1389ms (Views: 1355.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-05 23:14:21 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [3 times] (1.8ms)
+  Rendered rnamings/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 100ms (Views: 93.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rnamings" for 127.0.0.1 at 2018-06-05 23:14:23 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 79ms (Views: 72.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 15:38:07 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.4ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [3 times] (2.5ms)
+  Rendered rnamings/show.html.erb within layouts/application (600.4ms)
+Completed 200 OK in 11221ms (Views: 11022.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-06 22:36:48 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 1306ms (Views: 1248.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 22:36:55 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [3 times] (19.1ms)
+  Rendered rnamings/show.html.erb within layouts/application (188.7ms)
+Completed 500 Internal Server Error in 262ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"categories", :id=>"2"}, missing required keys: [:rnaming_id]):
+    2: 
+    3: <!-- There is only one thing inside of the category model, and that is instance -->
+    4: 
+    5: <%= link_to "Show", rnaming_category_path(), method: :show %>
+    6: 
+    7: 
+    8: 
+  
+app/views/categories/_category.html.erb:5:in `_app_views_categories__category_html_erb__4492033085561465768_70172148635900'
+app/views/rnamings/show.html.erb:3:in `_app_views_rnamings_show_html_erb__1687358205327821802_70172142319740'
+Started GET "/rnamings" for 127.0.0.1 at 2018-06-06 22:37:59 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 790ms (Views: 699.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-06 22:38:01 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 56ms (Views: 52.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 22:38:03 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.5ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [3 times] (3.6ms)
+  Rendered rnamings/show.html.erb within layouts/application (79.3ms)
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"categories", :id=>"2"}, missing required keys: [:rnaming_id]):
+    2: 
+    3: <!-- There is only one thing inside of the category model, and that is instance -->
+    4: 
+    5: <%= link_to "Show", rnaming_category_path(), method: :show %>
+    6: 
+    7: 
+    8: 
+  
+app/views/categories/_category.html.erb:5:in `_app_views_categories__category_html_erb__4492033085561465768_70172177968320'
+app/views/rnamings/show.html.erb:3:in `_app_views_rnamings_show_html_erb__1687358205327821802_70172195167860'
+Started GET "/" for 127.0.0.1 at 2018-06-06 22:40:58 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 323ms (Views: 297.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 22:41:56 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [3 times] (2.9ms)
+  Rendered rnamings/show.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 75ms (Views: 65.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 22:42:03 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [3 times] (3.0ms)
+  Rendered rnamings/show.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 90ms (Views: 80.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/rnamings/3/categories/2" for 127.0.0.1 at 2018-06-06 22:42:06 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/rnamings/3/categories/2"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/rnamings/3/categories/2" for 127.0.0.1 at 2018-06-06 22:51:58 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/rnamings/3/categories/2"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rnamings" for 127.0.0.1 at 2018-06-06 22:52:06 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.5ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 1070ms (Views: 1021.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-06 22:52:07 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.6ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 75ms (Views: 66.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 22:52:09 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.4ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [3 times] (2.6ms)
+  Rendered rnamings/show.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 87ms (Views: 76.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rnamings/ruby.ico" for 127.0.0.1 at 2018-06-06 22:52:09 -0400
+Processing by RnamingsController#show as 
+  Parameters: {"id"=>"ruby"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=ruby):
+  
+app/controllers/rnamings_controller.rb:67:in `set_rnaming'
+Started GET "/rnamings/3/categories/2" for 127.0.0.1 at 2018-06-06 22:52:11 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"3", "id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=3):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started PUT "/__web_console/repl_sessions/2e4b6316c142ed59b627af13eee757f5" for 127.0.0.1 at 2018-06-06 22:53:03 -0400
+Started PUT "/__web_console/repl_sessions/2e4b6316c142ed59b627af13eee757f5" for 127.0.0.1 at 2018-06-06 22:53:04 -0400
+Started PUT "/__web_console/repl_sessions/2e4b6316c142ed59b627af13eee757f5" for 127.0.0.1 at 2018-06-06 22:53:05 -0400
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" LIMIT ?[0m  [["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/2e4b6316c142ed59b627af13eee757f5" for 127.0.0.1 at 2018-06-06 22:53:20 -0400
+Started PUT "/__web_console/repl_sessions/2e4b6316c142ed59b627af13eee757f5" for 127.0.0.1 at 2018-06-06 22:53:22 -0400
+Started PUT "/__web_console/repl_sessions/2e4b6316c142ed59b627af13eee757f5" for 127.0.0.1 at 2018-06-06 22:53:37 -0400
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 22:54:06 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [3 times] (2.2ms)
+  Rendered rnamings/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 151ms (Views: 146.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/3/categories/2" for 127.0.0.1 at 2018-06-06 22:54:10 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"3", "id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=3):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 22:54:12 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [3 times] (1.4ms)
+  Rendered rnamings/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 82ms (Views: 75.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 22:55:43 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [3 times] (1.8ms)
+  Rendered rnamings/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 169ms (Views: 163.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rnamings/ruby.ico" for 127.0.0.1 at 2018-06-06 22:55:44 -0400
+Processing by RnamingsController#show as 
+  Parameters: {"id"=>"ruby"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=ruby):
+  
+app/controllers/rnamings_controller.rb:67:in `set_rnaming'
+Started DELETE "/rnamings/2/categories/5" for 127.0.0.1 at 2018-06-06 22:55:50 -0400
+Processing by CategoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"n1HAueVkR4W3wOUlQQFlTp/8KIwz+Ua0/MGuFziD0n3ZllZ5w6ig25wp7GrK3/6MUBRPjomQSqaMc9bro3kg/g==", "rnaming_id"=>"2", "id"=>"5"}
+  [1m[36mRnaming Load (0.4ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 5]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+No template found for CategoriesController#destroy, rendering head :no_content
+Completed 204 No Content in 175ms (ActiveRecord: 7.5ms)
+
+
+Started DELETE "/rnamings/2/categories/5" for 127.0.0.1 at 2018-06-06 22:55:57 -0400
+Processing by CategoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"n1HAueVkR4W3wOUlQQFlTp/8KIwz+Ua0/MGuFziD0n3ZllZ5w6ig25wp7GrK3/6MUBRPjomQSqaMc9bro3kg/g==", "rnaming_id"=>"2", "id"=>"5"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Category with 'id'=5 [WHERE "categories"."rnaming_id" = ?]):
+  
+app/controllers/categories_controller.rb:17:in `destroy'
+Started PUT "/__web_console/repl_sessions/9b0188df966c50b0d2925d37c81ea477" for 127.0.0.1 at 2018-06-06 22:56:41 -0400
+Started PUT "/__web_console/repl_sessions/9b0188df966c50b0d2925d37c81ea477" for 127.0.0.1 at 2018-06-06 22:56:42 -0400
+Started PUT "/__web_console/repl_sessions/9b0188df966c50b0d2925d37c81ea477" for 127.0.0.1 at 2018-06-06 22:57:26 -0400
+Started PUT "/__web_console/repl_sessions/9b0188df966c50b0d2925d37c81ea477" for 127.0.0.1 at 2018-06-06 22:57:27 -0400
+Started PUT "/__web_console/repl_sessions/9b0188df966c50b0d2925d37c81ea477" for 127.0.0.1 at 2018-06-06 22:57:28 -0400
+Started PUT "/__web_console/repl_sessions/9b0188df966c50b0d2925d37c81ea477" for 127.0.0.1 at 2018-06-06 22:57:31 -0400
+  [1m[36mRnaming Load (0.4ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Rnaming Load (0.0ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/9b0188df966c50b0d2925d37c81ea477" for 127.0.0.1 at 2018-06-06 22:57:36 -0400
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Rnaming Load (0.0ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/9b0188df966c50b0d2925d37c81ea477" for 127.0.0.1 at 2018-06-06 22:57:36 -0400
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["LIMIT", 11]]
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 22:58:06 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.4ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.3ms)
+  Rendered rnamings/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 71ms (Views: 65.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rnamings/2/edit" for 127.0.0.1 at 2018-06-06 22:58:13 -0400
+Processing by RnamingsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/edit.html.erb within layouts/application
+  Rendered rnamings/_form.html.erb (173.5ms)
+  Rendered rnamings/edit.html.erb within layouts/application (190.0ms)
+Completed 200 OK in 285ms (Views: 239.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 22:59:13 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.4ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.6ms)
+  Rendered rnamings/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 664ms (Views: 657.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rnamings/3/categories/2" for 127.0.0.1 at 2018-06-06 22:59:16 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"3", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=3):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 22:59:47 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 22:59:49 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 22:59:49 -0400
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" LIMIT ?[0m  [["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:00:21 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:00:22 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:00:33 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:01:08 -0400
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Rnaming Load (0.0ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:01:17 -0400
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Rnaming Load (0.0ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:01:18 -0400
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:03:45 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:03:47 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:04:09 -0400
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Rnaming Load (0.0ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:04:14 -0400
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Rnaming Load (0.0ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:04:33 -0400
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:04:44 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:04:46 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:04:48 -0400
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:04:50 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:04:53 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:04:55 -0400
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:12:25 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:12:48 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:13:09 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:13:21 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:13:31 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:13:43 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:13:45 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:14:00 -0400
+Started PUT "/__web_console/repl_sessions/65837b0c681d9285cdbe16612d573262" for 127.0.0.1 at 2018-06-06 23:14:08 -0400
+  [1m[36mRnaming Load (0.5ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:14:17 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (3.1ms)
+  Rendered rnamings/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 885ms (Views: 879.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rnamings/4/categories/2" for 127.0.0.1 at 2018-06-06 23:14:24 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"4", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=4):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:14:27 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.4ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.6ms)
+  Rendered rnamings/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 71ms (Views: 62.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rnamings/3/categories/2" for 127.0.0.1 at 2018-06-06 23:14:29 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"3", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=3):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:14:30 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.6ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.7ms)
+  Rendered rnamings/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 63ms (Views: 55.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rnamings/4/categories/2" for 127.0.0.1 at 2018-06-06 23:14:32 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"4", "id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=4):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:14:34 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.2ms)
+  Rendered rnamings/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 56ms (Views: 50.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/4/categories/2" for 127.0.0.1 at 2018-06-06 23:15:20 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"4", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=4):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:15:22 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.3ms)
+  Rendered rnamings/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 56ms (Views: 50.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rnamings/4/categories/2" for 127.0.0.1 at 2018-06-06 23:15:24 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"4", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=4):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:15:26 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.2ms)
+  Rendered rnamings/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 57ms (Views: 51.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/3/categories/2" for 127.0.0.1 at 2018-06-06 23:15:27 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"3", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=3):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:15:31 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.4ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.5ms)
+  Rendered rnamings/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 64ms (Views: 58.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rnamings/3/categories/2" for 127.0.0.1 at 2018-06-06 23:15:41 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"3", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=3):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:15:49 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.3ms)
+  Rendered rnamings/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 59ms (Views: 52.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/3/categories/2" for 127.0.0.1 at 2018-06-06 23:17:06 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"3", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=3):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started PUT "/__web_console/repl_sessions/b1c64ecc63a851ef0cbd2e744c1c2a56" for 127.0.0.1 at 2018-06-06 23:17:08 -0400
+Started PUT "/__web_console/repl_sessions/b1c64ecc63a851ef0cbd2e744c1c2a56" for 127.0.0.1 at 2018-06-06 23:17:09 -0400
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:17:28 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.2ms)
+  Rendered rnamings/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 84ms (Views: 78.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:21:38 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.9ms)
+  Rendered rnamings/show.html.erb within layouts/application (52.2ms)
+Completed 200 OK in 188ms (Views: 156.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/rnamings/3/categories/2" for 127.0.0.1 at 2018-06-06 23:21:40 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"3", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=3):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:21:45 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.4ms)
+  Rendered rnamings/show.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 74ms (Views: 68.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/3/categories/2" for 127.0.0.1 at 2018-06-06 23:21:48 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"3", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=3):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:21:49 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.2ms)
+  Rendered rnamings/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 56ms (Views: 50.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/3/categories/2" for 127.0.0.1 at 2018-06-06 23:21:54 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"3", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=3):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:21:55 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.8ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.4ms)
+  Rendered rnamings/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 60ms (Views: 52.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/rnamings/3/categories/2" for 127.0.0.1 at 2018-06-06 23:22:04 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"3", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=3):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started PUT "/__web_console/repl_sessions/5107a6f1eec906e3176ebc0464753ef1" for 127.0.0.1 at 2018-06-06 23:22:07 -0400
+Started PUT "/__web_console/repl_sessions/5107a6f1eec906e3176ebc0464753ef1" for 127.0.0.1 at 2018-06-06 23:22:10 -0400
+Started PUT "/__web_console/repl_sessions/5107a6f1eec906e3176ebc0464753ef1" for 127.0.0.1 at 2018-06-06 23:22:13 -0400
+  [1m[36mRnaming Load (0.6ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Rnaming Load (0.0ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/5107a6f1eec906e3176ebc0464753ef1" for 127.0.0.1 at 2018-06-06 23:22:15 -0400
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Rnaming Load (0.0ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/5107a6f1eec906e3176ebc0464753ef1" for 127.0.0.1 at 2018-06-06 23:22:18 -0400
+  [1m[36mRnaming Load (0.6ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 3], ["LIMIT", 1]]
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:22:23 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.5ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (2.4ms)
+  Rendered rnamings/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 65ms (Views: 59.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rnamings/3/categories/2" for 127.0.0.1 at 2018-06-06 23:22:30 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"3", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=3):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:22:31 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.5ms)
+  Rendered rnamings/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 85ms (Views: 78.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/rnamings/2/categories/3" for 127.0.0.1 at 2018-06-06 23:22:34 -0400
+Processing by CategoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"STqS7cG6JHMrx2gfg0WMQmUoO4uzsIvzhKs9RhIAGEsP/QQt53bDLQAuYVAImxeAqsBciQnZh+H0GUW6ifrqyA==", "rnaming_id"=>"2", "id"=>"3"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 3]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+No template found for CategoriesController#destroy, rendering head :no_content
+Completed 204 No Content in 170ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:22:41 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [1 times] (0.8ms)
+  Rendered rnamings/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 56ms (Views: 50.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:23:35 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [1 times] (1.1ms)
+  Rendered rnamings/show.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 95ms (Views: 77.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/rnamings/4/categories/2" for 127.0.0.1 at 2018-06-06 23:23:36 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"4", "id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=4):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:23:38 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [1 times] (1.1ms)
+  Rendered rnamings/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 55ms (Views: 48.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:23:57 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [1 times] (1.4ms)
+  Rendered rnamings/show.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 100ms (Views: 80.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/rnamings/4/categories/2" for 127.0.0.1 at 2018-06-06 23:23:58 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"4", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=4):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:24:06 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [1 times] (0.9ms)
+  Rendered rnamings/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 54ms (Views: 48.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/4/categories/2" for 127.0.0.1 at 2018-06-06 23:24:08 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"4", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=4):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:24:10 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [1 times] (0.9ms)
+  Rendered rnamings/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 59ms (Views: 53.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/4/categories/2" for 127.0.0.1 at 2018-06-06 23:24:16 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"4", "id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=4):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started PUT "/__web_console/repl_sessions/4a78e302977db4f5287df2de16a15cb7" for 127.0.0.1 at 2018-06-06 23:24:23 -0400
+Started PUT "/__web_console/repl_sessions/4a78e302977db4f5287df2de16a15cb7" for 127.0.0.1 at 2018-06-06 23:24:23 -0400
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:25:35 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [1 times] (1.0ms)
+  Rendered rnamings/show.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 83ms (Views: 64.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:25:38 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [1 times] (1.0ms)
+  Rendered rnamings/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 55ms (Views: 51.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/4/categories/2" for 127.0.0.1 at 2018-06-06 23:25:40 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"4", "id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 4], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 95ms (Views: 65.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rnamings/4/categories/2" for 127.0.0.1 at 2018-06-06 23:25:49 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"4", "id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 4], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 82ms (Views: 70.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rnamings" for 127.0.0.1 at 2018-06-06 23:28:08 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 499ms (Views: 473.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rnamings/1" for 127.0.0.1 at 2018-06-06 23:28:23 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered rnamings/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 96ms (Views: 88.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rnamings" for 127.0.0.1 at 2018-06-06 23:28:26 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 86ms (Views: 78.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:28:27 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [1 times] (1.8ms)
+  Rendered rnamings/show.html.erb within layouts/application (64.4ms)
+Completed 200 OK in 142ms (Views: 132.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:29:35 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [1 times] (4.3ms)
+  Rendered rnamings/show.html.erb within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"categories", :id=>"2"}, missing required keys: [:rnaming_id]):
+    4: 
+    5: 
+    6: 
+    7:    <%= link_to "Show", ShowCategory_path() %>
+    8: 
+    9: 
+   10: 
+  
+app/views/categories/_category.html.erb:7:in `_app_views_categories__category_html_erb__4492033085561465768_70172143490080'
+app/views/rnamings/show.html.erb:3:in `_app_views_rnamings_show_html_erb__1687358205327821802_70172209285240'
+Started PUT "/__web_console/repl_sessions/fb1d8fe85c1c3f9cb7c1edbadff112c6" for 127.0.0.1 at 2018-06-06 23:38:47 -0400
+Started PUT "/__web_console/repl_sessions/fb1d8fe85c1c3f9cb7c1edbadff112c6" for 127.0.0.1 at 2018-06-06 23:38:56 -0400
+Started PUT "/__web_console/repl_sessions/fb1d8fe85c1c3f9cb7c1edbadff112c6" for 127.0.0.1 at 2018-06-06 23:39:00 -0400
+  [1m[36mRnaming Load (1.4ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Rnaming Load (0.0ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/fb1d8fe85c1c3f9cb7c1edbadff112c6" for 127.0.0.1 at 2018-06-06 23:39:06 -0400
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Rnaming Load (0.0ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/fb1d8fe85c1c3f9cb7c1edbadff112c6" for 127.0.0.1 at 2018-06-06 23:40:18 -0400
+  [1m[36mRnaming Load (0.9ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["LIMIT", 11]]
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "categories" ("instance", "rnaming_id", "created_at", "updated_at", "case", "character", "plurality") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["instance", "a"], ["rnaming_id", 2], ["created_at", "2018-06-07 03:49:56.655194"], ["updated_at", "2018-06-07 03:49:56.655194"], ["case", "b"], ["character", "c"], ["plurality", "d"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/rnamings" for 127.0.0.1 at 2018-06-06 23:50:12 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.4ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 529ms (Views: 497.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-06 23:50:13 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 54ms (Views: 50.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ruby.ico" for 127.0.0.1 at 2018-06-06 23:50:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/ruby.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:50:15 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.9ms)
+  Rendered rnamings/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 106ms (Views: 100.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:50:39 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.5ms)
+  Rendered rnamings/show.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 128ms (Views: 95.1ms | ActiveRecord: 2.7ms)
+
+
+Started DELETE "/rnamings/2/categories/6" for 127.0.0.1 at 2018-06-06 23:50:44 -0400
+Processing by CategoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"P3Cvl8yY6yXI6byrWKJfdFe7c2HVzyemKqnoH9/fL8F5tzlX6lQMe+MAteTTfMS2mFMUY2+mK7RaG5DjRCXdQg==", "rnaming_id"=>"2", "id"=>"6"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `categories' for nil:NilClass):
+  
+app/controllers/categories_controller.rb:17:in `destroy'
+Started GET "/" for 127.0.0.1 at 2018-06-06 23:52:09 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.4ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 328ms (Views: 260.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:52:12 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.4ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.4ms)
+  Rendered rnamings/show.html.erb within layouts/application (137.9ms)
+Completed 200 OK in 204ms (Views: 193.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/rnamings/6/categories/2" for 127.0.0.1 at 2018-06-06 23:52:15 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"authenticity_token"=>"8uNe52fEqS1IhNV7ICEzLbjClJQy5o6Mn141SSjKUym0JMgnQQhOc2Nt3DSr/6jvdyrzloiPgp7v7E21szChqg==", "rnaming_id"=>"6", "id"=>"2"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `categories' for nil:NilClass):
+  
+app/controllers/categories_controller.rb:12:in `show'
+Started GET "/" for 127.0.0.1 at 2018-06-06 23:52:43 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 147ms (Views: 113.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:52:45 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.3ms)
+  Rendered rnamings/show.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 121ms (Views: 109.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/rnamings/6/categories/2" for 127.0.0.1 at 2018-06-06 23:52:47 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"authenticity_token"=>"+jB/96htXHfk0WcodztYhFsChEzc6Uz3KAPjBQzcDb289+k3jqG7Kc84bmf85cNGlOrjTmaAQOVYsZv5lyb/Pg==", "rnaming_id"=>"6", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=6):
+  
+app/controllers/categories_controller.rb:23:in `set_rnaming'
+Started GET "/rnamings/6/categories/2" for 127.0.0.1 at 2018-06-06 23:54:10 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"authenticity_token"=>"+jB/96htXHfk0WcodztYhFsChEzc6Uz3KAPjBQzcDb289+k3jqG7Kc84bmf85cNGlOrjTmaAQOVYsZv5lyb/Pg==", "rnaming_id"=>"6", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 404 Not Found in 53ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=6):
+  
+app/controllers/categories_controller.rb:24:in `set_rnaming'
+Started GET "/rnamings/6/categories/2" for 127.0.0.1 at 2018-06-06 23:54:49 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"authenticity_token"=>"+jB/96htXHfk0WcodztYhFsChEzc6Uz3KAPjBQzcDb289+k3jqG7Kc84bmf85cNGlOrjTmaAQOVYsZv5lyb/Pg==", "rnaming_id"=>"6", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 404 Not Found in 20ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=6):
+  
+app/controllers/categories_controller.rb:24:in `set_rnaming'
+Started GET "/rnamings/6/categories/2" for 127.0.0.1 at 2018-06-06 23:54:55 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"authenticity_token"=>"+jB/96htXHfk0WcodztYhFsChEzc6Uz3KAPjBQzcDb289+k3jqG7Kc84bmf85cNGlOrjTmaAQOVYsZv5lyb/Pg==", "rnaming_id"=>"6", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=6):
+  
+app/controllers/categories_controller.rb:24:in `set_rnaming'
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:55:00 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.9ms)
+  Rendered rnamings/show.html.erb within layouts/application (54.5ms)
+Completed 200 OK in 353ms (Views: 339.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rnamings/2/categories/6" for 127.0.0.1 at 2018-06-06 23:55:04 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"authenticity_token"=>"pRL2OmBDRSp6nxMUUOhPgqRH84ClrKlxFASlpH+Z1yHj1WD6Ro+idFF2GlvbNtRAa6+Ugh/FpWNktt1Y5GMlog==", "rnaming_id"=>"2", "id"=>"6"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 6], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 54ms (Views: 47.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:58:29 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (2.0ms)
+  Rendered rnamings/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 303ms (Views: 297.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rnamings/2/categories/6" for 127.0.0.1 at 2018-06-06 23:58:31 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"authenticity_token"=>"lEG/FiqGB7Rmylp1bSoyoN8iQCAL0qPKMjxB1WTSON3ShinWDErg6k0jUzrm9KliEMonIrG7r9hCjjkp/yjKXg==", "rnaming_id"=>"2", "id"=>"6"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 6], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 53ms (Views: 46.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:58:35 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.3ms)
+  Rendered rnamings/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 58ms (Views: 52.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/2/categories/6" for 127.0.0.1 at 2018-06-06 23:58:36 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"authenticity_token"=>"3CcssRwx+TAlPueGYH+2lMfov9Lci0QzZ6TBWzPKQxua4LpxOv0ebg7X7snroS1WCADY0GbiSCEXFrmnqDCxmA==", "rnaming_id"=>"2", "id"=>"6"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 6], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 50ms (Views: 43.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:59:39 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.5ms)
+  Rendered rnamings/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 61ms (Views: 55.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-06 23:59:40 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.4ms)
+  Rendered rnamings/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 57ms (Views: 52.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/6/categories/2" for 127.0.0.1 at 2018-06-06 23:59:41 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"authenticity_token"=>"pn+DzBuWUSznfqoF/SIoGg6fUHGyCXNZmWikXhMkpjTguBUMPVq2csyXo0p2/LPYwXc3cwhgf0vp2tyiiN5Utw==", "rnaming_id"=>"6", "id"=>"2"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rnaming with 'id'=6):
+  
+app/controllers/categories_controller.rb:24:in `set_rnaming'
+Started GET "/" for 127.0.0.1 at 2018-06-07 00:14:49 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 839ms (Views: 726.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-07 00:14:54 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (1.6ms)
+  Rendered rnamings/show.html.erb within layouts/application (239.9ms)
+Completed 200 OK in 340ms (Views: 283.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/rnamings/2/categories/6" for 127.0.0.1 at 2018-06-07 00:14:56 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"2", "id"=>"6"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 6], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 67ms (Views: 55.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rnamings/2/categories/4" for 127.0.0.1 at 2018-06-07 00:14:59 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"2", "id"=>"4"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 4], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 70ms (Views: 63.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rnamings/2" for 127.0.0.1 at 2018-06-07 00:15:33 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 2]]
+  Rendered collection of categories/_category.html.erb [2 times] (2.3ms)
+  Rendered rnamings/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 591ms (Views: 585.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rnamings/2/categories/6" for 127.0.0.1 at 2018-06-07 00:15:36 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"2", "id"=>"6"}
+  [1m[36mRnaming Load (0.7ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 6], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 484ms (Views: 476.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/rnamings/2/categories/4" for 127.0.0.1 at 2018-06-07 00:15:40 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"rnaming_id"=>"2", "id"=>"4"}
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ? AND "categories"."id" = ? LIMIT ?[0m  [["rnaming_id", 2], ["id", 4], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2171ms (Views: 894.3ms | ActiveRecord: 0.5ms)
+
+
