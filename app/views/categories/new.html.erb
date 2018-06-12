@@ -1,0 +1,35 @@
+<h1>New category</h1>
+
+
+
+
+
+<div class="field">
+
+  <%= form_for @category do |f| %>
+    <%= f.label "What instance" %>
+    <%= form.text_field :instance, placeholder: "type here"%>
+    <p style = "visibility:hidden;">jhjh</p>
+
+    <%= f.label "What instance" %>
+    <%= form.text_field :case, placeholder: "type here"%>
+    <p style = "visibility:hidden;">jhjh</p>
+
+    <%= f.label "What instance" %>
+    <%= form.text_field :character, placeholder: "type here"%>
+    <p style = "visibility:hidden;">jhjh</p>
+
+    <%= f.label "What instance" %>
+    <%= form.text_field :plurality, placeholder: "type here"%>
+    <p style = "visibility:hidden;">jhjh</p>
+    <p style = "visibility:hidden;">jhjh</p>
+</div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+<%= link_to 'Back', rnaming_path %>

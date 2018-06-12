@@ -54,6 +54,9 @@ class RnamingsController < ApplicationController
   # DELETE /rnamings/1
   # DELETE /rnamings/1.json
   def destroy
+    a = @rnaming.categories
+    b = a.all.ids
+    a.where(:id => b).destroy_all
     @rnaming.destroy
     respond_to do |format|
       format.html { redirect_to rnamings_url, notice: 'Rnaming was successfully destroyed.' }

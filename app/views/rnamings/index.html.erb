@@ -13,7 +13,7 @@
     <% @rnamings.each do |rnaming| %>
       <tr>
         <td><%= rnaming.area%></td>
-        <td><%= link_to 'Show', rnaming %></td>
+        <td><%= link_to 'Show', rnaming_path(rnaming) %></td>
         <td><%= link_to 'Edit', edit_rnaming_path(rnaming) %></td>
         <td><%= link_to 'Destroy', rnaming, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

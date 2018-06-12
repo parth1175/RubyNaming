@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :set_rnaming, only: [:create,:destroy,:show]
+  before_action :set_rnaming, only: [:create,:destroy,:show, :new]
     def create
       @rname.categories.create(params[:category].permit(:instance))
 
@@ -16,6 +16,10 @@ class CategoriesController < ApplicationController
 
     def destroy
       @rname.categories.find(params[:id]).destroy
+    end
+
+    def new
+      @category = @rname.categories.new
     end
 
 private
