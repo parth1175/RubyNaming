@@ -16,6 +16,7 @@ class CategoriesController < ApplicationController
 
     def destroy
       @rname.categories.find(params[:id]).destroy
+      redirect_to @rname
     end
 
     def new

@@ -4,7 +4,7 @@
 
 <div class="field">
 
-  <%= form_for @category do |f| %>
+  <%= form_with (model:rnaming.categories) do |f| %>
     <%= f.label "What instance" %>
     <%= form.text_field :instance, placeholder: "type here"%>
     <p style = "visibility:hidden;">jhjh</p>
