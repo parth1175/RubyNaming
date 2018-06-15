@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   before_action :set_rnaming, only: [:create,:destroy,:show, :new]
     def create
-      @rname.categories.create(params[:category].permit(:instance))
+      @a = @rname.categories.create(params[:category].permit(:instance, :case, :character, :plurality, :side_note))
 
       redirect_to @rname
       # I dont know the story behind redirect_to, but Ill explore that later.

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180605005712) do
+ActiveRecord::Schema.define(version: 20180612064941) do
 
   create_table "categories", force: :cascade do |t|
     t.string "instance"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20180605005712) do
     t.string "case"
     t.string "character"
     t.string "plurality"
+    t.text "side_note"
     t.index ["rnaming_id"], name: "index_categories_on_rnaming_id"
   end
 
