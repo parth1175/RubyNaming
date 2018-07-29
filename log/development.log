@@ -6604,3 +6604,108 @@ Processing by CategoriesController#new as HTML
 Completed 200 OK in 140ms (Views: 86.4ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/rnamings" for 127.0.0.1 at 2018-07-28 22:06:30 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.3ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 2171ms (Views: 2114.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/ruby.ico" for 127.0.0.1 at 2018-07-28 22:06:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/ruby.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rnamings/3" for 127.0.0.1 at 2018-07-28 22:08:32 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRnaming Load (0.5ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 3]]
+  Rendered collection of categories/_category.html.erb [1 times] (1.3ms)
+  Rendered rnamings/show.html.erb within layouts/application (151.1ms)
+Completed 200 OK in 322ms (Views: 204.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/rnamings" for 127.0.0.1 at 2018-07-28 22:08:37 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.5ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 78ms (Views: 72.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rnamings/4" for 127.0.0.1 at 2018-07-28 22:08:38 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 4]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered rnamings/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 85ms (Views: 78.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings" for 127.0.0.1 at 2018-07-28 22:08:39 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.4ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 89ms (Views: 79.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rnamings/6" for 127.0.0.1 at 2018-07-28 22:08:40 -0400
+Processing by RnamingsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRnaming Load (0.2ms)[0m  [1m[34mSELECT  "rnamings".* FROM "rnamings" WHERE "rnamings"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering rnamings/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rnaming_id" = ?[0m  [["rnaming_id", 6]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered rnamings/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 61ms (Views: 53.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rnamings" for 127.0.0.1 at 2018-07-28 22:08:42 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (0.6ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 72ms (Views: 62.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rnamings" for 127.0.0.1 at 2018-07-28 22:46:03 -0400
+Processing by RnamingsController#index as HTML
+  Rendering rnamings/index.html.erb within layouts/application
+  [1m[36mRnaming Load (121.7ms)[0m  [1m[34mSELECT "rnamings".* FROM "rnamings"[0m
+  Rendered rnamings/index.html.erb within layouts/application (151.3ms)
+Completed 200 OK in 1936ms (Views: 1713.9ms | ActiveRecord: 121.7ms)
+
+
